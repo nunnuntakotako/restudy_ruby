@@ -1,7 +1,17 @@
-#ドリンクを3本買うごとに1本おまけされる。
+# frozen_string_literal: true
 
-buy_drinks = 100
-present = buy_drinks / 3
-sum_drinks = buy_drinks + present
+# buy_drinks = 20
+puts "何本買いますか？"
+buy_drinks = gets.to_i
 
-puts "おまけの#{present}本を足して、合計で#{sum_drinks}本だね。"
+def drink(num)
+  present = 0
+  while num >= 3
+    num = num - 3 + 1
+    present += 1
+  end
+  present
+end
+
+puts "最初に#{buy_drinks}本買ったんだね。"
+puts "全部で#{buy_drinks + drink(buy_drinks)}本飲めるね"
