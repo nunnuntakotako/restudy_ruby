@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
-# buy_drinks = 20
-puts "何本買いますか？"
+puts '何本買いますか？'
 buy_drinks = gets.to_i
 
 def drink(num)
