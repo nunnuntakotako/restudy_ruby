@@ -5,6 +5,7 @@ b = rand(11..20)
 c = rand(21..30)
 
 nums = [a,b,c]
+nums_box = []
 sum = 0
 
 nums.each do |n|
