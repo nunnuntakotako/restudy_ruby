@@ -16,13 +16,11 @@ end
 p nums_box
 
 nums_box.each do |num|
-  num.each_with_index do |n,i|
+  num.each do |n|
     sum += n
-    if i == 2
-      num << sum
-      sum = 0
-    end
   end
+  num << sum
 end
 
+p sum
 p nums_box
