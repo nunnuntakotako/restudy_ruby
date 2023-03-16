@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
-
-
-element_size = 4
+element_size = 3
 sum = 0
 sums = []
 nums_box = []
@@ -19,6 +17,9 @@ element_size.times do |time|
   nums_box << make_num
 end
 
+p nums_box
+p renums_box = nums_box.transpose
+
 nums_box.each do |num|
   num.each_with_index do |n,i|
     sum += n
@@ -26,4 +27,4 @@ nums_box.each do |num|
   end
 end
 
-puts nums_box
+p nums_box
