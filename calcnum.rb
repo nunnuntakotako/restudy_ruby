@@ -20,6 +20,13 @@ end
 p nums_box
 p renums_box = nums_box.transpose
 
+renums_box.each do |num|
+  num.each_with_index do |n,i|
+    sum += n
+    num << sum if i == 2
+  end
+end
+
 nums_box.each do |num|
   num.each_with_index do |n,i|
     sum += n
@@ -28,3 +35,4 @@ nums_box.each do |num|
 end
 
 p nums_box
+p renums_box
