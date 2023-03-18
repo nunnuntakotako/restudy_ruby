@@ -1,26 +1,38 @@
 # frozen_string_literal: true
 
-a = rand(1..10)
-b = rand(11..20)
-c = rand(21..30)
-
-nums = [a,b,c]
+element_size = 3
 sum = 0
 sums = []
 nums_box = []
 
-3.times do |time|
-  nums_box << nums
+def make_num
+  a = rand(1..10)
+  b = rand(11..20)
+  c = rand(21..30)
+  nums = [a,b,c]
+  nums
+end
+
+element_size.times do |time|
+  nums_box << make_num
 end
 
 p nums_box
+p renums_box = nums_box.transpose
+
+renums_box.each do |num|
+  num.each_with_index do |n,i|
+    sum += n
+    num << sum if i == 2
+  end
+end
 
 nums_box.each do |num|
-  num.each do |n|
+  num.each_with_index do |n,i|
     sum += n
+    num << sum if i == 2
   end
-  num << sum
 end
 
-p sum
 p nums_box
+p renums_box
