@@ -34,5 +34,8 @@ nums_box.each do |num|
   end
 end
 
-p nums_box
+nums_box.each do |num|
+  p num
+end
+
 p renums_box
