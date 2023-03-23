@@ -2,6 +2,7 @@
 
 element_size = 3
 sum = 0
+resum = 0
 sums = []
 nums_box = []
 
@@ -20,20 +21,24 @@ end
 p nums_box
 p renums_box = nums_box.transpose
 
+nums_box.each do |num|
+  num.each_with_index do |n,i|
+    sum += n
+    num << sum if i == 2
+  end
+end
+
+ renums_box.each do |num|
+   num.each_with_index do |n,i|
+     resum += n
+     num << resum if i == 2
+   end
+ end
+
+nums_box.each do |num|
+  p num
+end
+
 renums_box.each do |num|
-  num.each_with_index do |n,i|
-    sum += n
-    num << sum if i == 2
-  end
-end
-
-nums_box.each do |num|
-  num.each_with_index do |n,i|
-    sum += n
-    num << sum if i == 2
-  end
-end
-
-nums_box.each do |num|
   p num
 end
