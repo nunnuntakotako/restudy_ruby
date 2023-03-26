@@ -4,6 +4,7 @@ element_size = 3
 sum = 0
 resum = 0
 sums = []
+low_sum = []
 nums_box = []
 
 def make_num
@@ -18,8 +19,7 @@ element_size.times do |time|
   nums_box << make_num
 end
 
-p nums_box
-p renums_box = nums_box.transpose
+renums_box = nums_box.transpose
 
 nums_box.each do |num|
   num.each_with_index do |n,i|
@@ -27,6 +27,8 @@ nums_box.each do |num|
     num << sum if i == 2
   end
 end
+
+sum = 0
 
  renums_box.each do |num|
    num.each_with_index do |n,i|
@@ -40,5 +42,10 @@ nums_box.each do |num|
 end
 
 renums_box.each do |num|
-  p num
+  low_sum << num[3]
+  sum += num[3]
 end
+
+low_sum << sum
+
+p low_sum
