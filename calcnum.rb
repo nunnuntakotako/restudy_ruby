@@ -26,16 +26,16 @@ nums_box.each do |num|
     sum += n
     num << sum if i == 2
   end
+  sum = 0
 end
 
-sum = 0
-
- renums_box.each do |num|
-   num.each_with_index do |n,i|
-     resum += n
-     num << resum if i == 2
-   end
- end
+renums_box.each do |num|
+  num.each_with_index do |n,i|
+    resum += n
+    num << resum if i == 2
+  end
+  resum = 0
+end
 
 nums_box.each do |num|
   p num
