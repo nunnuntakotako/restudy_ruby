@@ -1,13 +1,13 @@
-# 自分の得意な言語で
-# Let's チャレンジ！！
-input_line = gets.to_i
-input_line += 10
-puts input_line
-
 #文字列を囲んで出力
-input_line = gets.to_s
+input_line = gets
 counts = input_line.length
+deco = "+" * (counts + 1)
+datas = [deco,"+#{input_line}" ,deco]
 
-puts "+"
-puts input_line
-puts "+"
+datas.each_with_index do |data,i|
+  if i == 1
+    puts data.chomp + "+\n"
+  else
+    puts data
+  end
+end
