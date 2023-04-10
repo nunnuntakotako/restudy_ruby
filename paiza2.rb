@@ -1,8 +1,8 @@
 #素振り
 puts "購入するものの金額はいくらですか？"
 input_line = gets.to_i
-off_rate = 30
-price = input_line*(off_rate/100)
+off_rate = 0.3
+price = input_line * off_rate
 point = 0
 
 if price < 100
@@ -16,3 +16,4 @@ elsif price >= 100
 else
   puts "あなたの購入金額は#{price}円です。"
 end
+
