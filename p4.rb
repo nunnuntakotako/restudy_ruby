@@ -1,4 +1,4 @@
 #次のファイルの分離のみ
 time = Time.now
 
-puts time
+puts "今日は#{time.month}月#{time.day}日です。"
