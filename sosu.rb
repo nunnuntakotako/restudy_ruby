@@ -8,5 +8,8 @@ sosu = 2
 # end
 
 until num < sosu do
-  puts num = num / 2
+  unless num < sosu
+    puts num = num / 2
+  end
 end
+
